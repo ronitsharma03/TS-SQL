@@ -6,7 +6,7 @@ async function deleteTodo(todoId: number) {
         DELETE FROM todos WHERE id = $1
     `;
     await client.query(query, [todoId]);
-    console.log(`Todo with ID: ${todoId} deeted successfully`);
+    console.log(`Todo with ID: ${todoId} deleted successfully`);
 }
 
 deleteTodo(1);
